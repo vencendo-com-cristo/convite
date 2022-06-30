@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*variaveis*/
+:root {
+    --teste : 'text';
+    --cor : rgb(255, 255, 255); 
+}
+
+#tudo {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 255, 195, 0.64);
+    overflow: hidden;
+    border-radius:20px ;
+    width: 600px;
+    height: 650px;
+}
+
+#tudo::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 200%;
+    background: linear-gradient(#07f1d6, #2041ff);
+    animation: animate 10s linear infinite;
+    border-radius: 20px;
+}
+
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
+#tudo::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: #333;
+    border-radius: 20px;
+}
+
+
+body {
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(11, 10, 10);
+}
+
+.cabeçalho {
+    position: relative;
+    z-index: 10;
+}
+
+.cabeçalho > img {
+    height: 280px;
+   width: 400px;
+   margin: auto;
+   top: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   
+}
+
+
+.conteúdo {
+    font-family: var(--teste);
+    position: relative;
+    z-index: 10;
+}
+
+.conteúdo >h1 {
+    display: flex;
+}
+
+
+
+#toque {
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+#desbloq {
+    justify-content: center;
+    text-align: center;
+
+}
+
+.rodapé {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-top: 55px;
+   position: relative;
+    z-index: 10;
+    user-select: none;
+    cursor: pointer;
+   margin-left: 150px;
+   margin-right: 150px;
+}
+
+
+
+#toque {
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+#desbloq {
+    justify-content: center;
+    text-align: center;
+
+}
